@@ -4,5 +4,10 @@ body { background: #999; }
 
 nav       { float: left; width: 15%; height: 200px ;}
 nav span  { margin: 0px 100px 0px 0px;}
-section   { float: right; width: 80%; height: 200px ;}
+section   { float: right; width: 80%; min-height: 200px; }
 footer    { clear: both;  display: block; }
+.bloque {
+	float: left;
+  display: block;
+  margin: 5px;
+}
