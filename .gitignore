@@ -30,5 +30,8 @@ node_modules
 npm-debug.log
 .DS_Store
 
-# No guardar el fichero de base de datos 
+# Variables de entorno a despliegue local
+.env
+
+# No guardar el fichero de base de datos
 quiz.sqlite
