@@ -5,3 +5,9 @@ body             { background: #333; }
 h2 span, section h3 { display: none; }
 body                { font-size: xx-large; }
 footer, input       { font-size: large; }
+.bloque > th, td {
+  border: 1px solid black;
+}
+#author, #author th, #author td {
+	border: 1px solid black;
+}
