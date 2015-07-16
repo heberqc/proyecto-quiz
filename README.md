@@ -9,11 +9,11 @@ Proyecto del curso de Node.js de [Miriadax](https://www.miriadax.net)
 * Con `heroku open` se abrirá la página del proyecto en Heroku
 * Localmente el archivo `.env` deberá contener:
 
-      DATABASE_URL=sqlite://:@:/
-      DATABASE_STORAGE=quiz.sqlite
+        DATABASE_URL=sqlite://:@:/
+        DATABASE_STORAGE=quiz.sqlite
 
 * El repositorio en Heroku es:
 
-  `https://git.heroku.com/quiz-heberqc.git`
+        https://git.heroku.com/quiz-heberqc.git
 
 Heber Quequejana
