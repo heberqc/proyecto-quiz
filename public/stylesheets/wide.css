@@ -1,4 +1,4 @@
-body { background: #999; }
+body { background: indianred; }
 
 #page-wrap:after { content: "Wide Layout"; }
 
@@ -13,4 +13,11 @@ footer    { clear: both;  display: block; }
 }
 #author, #author th, #author td {
 	border: 1px solid black;
+}
+caption {
+	font-weight: bold;
+	padding: .5em;
+}
+a:hover {
+	font-weight: bold;
 }

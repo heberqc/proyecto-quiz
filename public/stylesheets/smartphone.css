@@ -1,4 +1,4 @@
-body             { background: #333; }
+body             { background: orange; }
 
 #page-wrap:after { content: "Smartphone Layout"; }
 
@@ -10,4 +10,11 @@ footer, input       { font-size: large; }
 }
 #author, #author th, #author td {
 	border: 1px solid black;
+}
+caption {
+	font-weight: bold;
+	padding: .5em;
+}
+a:hover {
+	font-weight: bold;
 }
