@@ -7,7 +7,7 @@
 <table width="100%">
 <%
   var mensaje;
-  if(texto === undefined) {
+  if(+(texto || '') === 0) {
     mensaje = "Lista de preguntas";
   } else {
     mensaje = "Resultados de la búsqueda: '" + texto + "'";

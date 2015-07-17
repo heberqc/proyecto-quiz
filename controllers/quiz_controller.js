@@ -16,7 +16,7 @@ exports.load = function(req, res, next, quizId) {
 exports.index = function(req, res) {
   var busqueda = req.query.search || '';  // Cadena de búsqueda
   var search; // Objeto que irá dentro de findAll
-  if (busqueda === '') {
+  if (+busqueda === 0) {
     search = {};
   } else {
     busqueda = '%' + busqueda.match(/[a-zñáéíóú]+/ig).join('%') + '%';
@@ -25,7 +25,8 @@ exports.index = function(req, res) {
         pregunta: {
           $like: busqueda
         }
-      }
+      },
+      order: [['pregunta', 'DESC']]
     };
   }
   models.Quiz.findAll(search)
