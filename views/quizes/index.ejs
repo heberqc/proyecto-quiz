@@ -5,7 +5,15 @@
 </form>
 <br>
 <table width="100%">
-  <caption>Lista de preguntas</caption>
+<%
+  var mensaje;
+  if(texto === undefined) {
+    mensaje = "Lista de preguntas";
+  } else {
+    mensaje = "Resultados de la búsqueda: '" + texto + "'";
+  }
+%>
+  <caption><%= mensaje %></caption>
 <% var i; for (i = 0; i < quizes.length; i++) { %>
   <tr>
     <td>
