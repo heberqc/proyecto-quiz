@@ -12,17 +12,23 @@ exports.load = function(req, res, next, quizId) {
   ).catch(function(error) { next(error);});
 };
 
-// GET /quizes?search=texto
+// GET /quizes?search=busqueda y /quizes
 exports.index = function(req, res) {
-  var texto = req.query.search || '';
-  texto = (texto === '')? '%' : '%' + texto + '%';
-  models.Quiz.findAll({
-    where: {
-      pregunta: {
-        $like: texto
+  var busqueda = req.query.search || '';  // Cadena de búsqueda
+  var search; // Objeto que irá dentro de findAll
+  if (busqueda === '') {
+    search = {};
+  } else {
+    busqueda = '%' + busqueda.match(/[a-zñáéíóú]+/ig).join('%') + '%';
+    search = {
+      where: {
+        pregunta: {
+          $like: busqueda
+        }
       }
-    }
-  })
+    };
+  }
+  models.Quiz.findAll(search)
   .then(function(quizes) {
     res.render('quizes/index.ejs', { quizes: quizes, texto: req.query.search});
   })
