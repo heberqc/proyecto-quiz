@@ -43,9 +43,27 @@ exports.show = function(req, res) {
 
 // GET /quizes/:id/answer
 exports.answer = function(req, res) {
-  var resultado = 'Incorrecto';
+  var resultado = 'INCORRECTO';
   if (req.query.respuesta === req.quiz.respuesta) {
-    resultado = 'Correcto';
+    resultado = '¡CORRECTO!';
   }
   res.render('quizes/answer', {quiz: req.quiz, respuesta: resultado});
+};
+
+// GET /quizes/new
+exports.new = function(req, res) {
+  var quiz = models.Quiz.build( // crea objeto quiz
+    { pregunta: "pregunta", respuesta: "respuesta" }
+  );
+  res.render('quizes/new', { quiz: quiz });
+};
+
+// POST /quizes/create
+exports.create = function(req, res) {
+  var quiz = models.Quiz.build(req.body.quiz);
+  // guardar en BBDD los campos pregunta y respuesta de quiz
+  quiz.save({ fields: ['pregunta', 'respuesta'] })
+  .then(function() {
+    res.redirect('/quizes');
+  }); // Redirección HTTP (URL relativo) lista de preguntas
 };
