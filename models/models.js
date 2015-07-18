@@ -39,7 +39,7 @@ sequelize.sync().then(function() {
       Quiz.bulkCreate([
         {pregunta: 'Capital de Italia',   respuesta: 'Roma'},
         {pregunta: 'Capital de Portugal', respuesta: 'Lisboa'},
-        {pregunta: 'Capital de Estados unidos', respuesta: 'Washintong'},
+        {pregunta: 'Capital de Estados unidos', respuesta: 'Washington'},
         {pregunta: 'Capital de Perú', respuesta: 'Lima'},
         {pregunta: 'Capital de Timor oriental', respuesta: 'Dili'},
         {pregunta: 'Capital de Suazilandia', respuesta: 'Mbabane'},
