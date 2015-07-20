@@ -19,3 +19,7 @@ caption {
 a:hover {
 	font-weight: bold;
 }
+#ErrorMsgs {
+	color: #f61;
+	font-size: smaller;
+}
