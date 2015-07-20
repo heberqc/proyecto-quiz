@@ -1,0 +1,5 @@
+<h3>Edite la pregunta</h3>
+<form method="post" action="/quizes/<%= quiz.id %>?_method=put" >
+  <% include _form.ejs %>
+</form>
+<a href="/quizes"><button type="button">Cancelar</button></a>
