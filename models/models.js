@@ -62,13 +62,23 @@ sequelize.sync().then(function() {
           tema: 'otro'
         },
         {
-          pregunta: 'Líder y fundador de la banda Led Zeppelin',
-          respuesta: 'Jimmy Page',
+          pregunta: 'Hija del almirante Daelin Proudmoore',
+          respuesta: 'Jaina Proudmoore',
           tema: 'ocio'
         },
         {
-          pregunta: 'Hija del almirante Daelin Proudmoore',
-          respuesta: 'Jaina Proudmoore',
+          pregunta: 'Masa/Volumen',
+          respuesta: 'Densidad',
+          tema: 'ciencia'
+        },
+        {
+          pregunta: 'Verdadero nombre del Conde de Montecristo',
+          respuesta: 'Edmundo Dantès',
+          tema: 'humanidades'
+        },
+        {
+          pregunta: 'Líder y fundador de la banda Led Zeppelin',
+          respuesta: 'Jimmy Page',
           tema: 'ocio'
         }
       ]).then(function(){console.log('Base de datos inicializada')});
