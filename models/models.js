@@ -37,13 +37,40 @@ sequelize.sync().then(function() {
   Quiz.count().then(function (count){
     if(count === 0) {   // la tabla se inicializa solo si está vacía
       Quiz.bulkCreate([
-        {pregunta: 'Capital de Italia',   respuesta: 'Roma'},
-        {pregunta: 'Capital de Portugal', respuesta: 'Lisboa'},
-        {pregunta: 'Capital de Estados unidos', respuesta: 'Washington'},
-        {pregunta: 'Capital de Perú', respuesta: 'Lima'},
-        {pregunta: 'Capital de Timor oriental', respuesta: 'Dili'},
-        {pregunta: 'Capital de Suazilandia', respuesta: 'Mbabane'},
-        {pregunta: 'Capital de Brunéi', respuesta: 'Bandar Seri Begawan'}
+        {
+          pregunta: 'Capital de Italia',
+          respuesta: 'Roma',
+          tema: 'otro'
+        },
+        {
+          pregunta: 'Escudero de Don Quijote de La Mancha',
+          respuesta: 'Sancho Panza',
+          tema: 'humanidades'},
+        {
+          pregunta: 'Fundador de la Free Software Foundation',
+          respuesta: 'Richard Stallman',
+          tema: 'tecnologia'
+        },
+        {
+          pregunta: 'Inventor de la dinamita',
+          respuesta: 'Alfred Nobel',
+          tema: 'ciencia'
+        },
+        {
+          pregunta: 'Capital de Timor oriental',
+          respuesta: 'Dili',
+          tema: 'otro'
+        },
+        {
+          pregunta: 'Líder y fundador de la banda Led Zeppelin',
+          respuesta: 'Jimmy Page',
+          tema: 'ocio'
+        },
+        {
+          pregunta: 'Hija del almirante Daelin Proudmoore',
+          respuesta: 'Jaina Proudmoore',
+          tema: 'ocio'
+        }
       ]).then(function(){console.log('Base de datos inicializada')});
     };
   });
