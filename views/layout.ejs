@@ -14,7 +14,7 @@
         href='/stylesheets/smartphone.css' />
 </head>
 
-<body>
+<body onload='onLoad()'>
 <div id="page-wrap">
   <header class="main" id="h1">
     <h2>Quiz<span>: el juego de las preguntas</span></h2>
@@ -46,5 +46,39 @@
     <a href="https://github.com/heberqc/proyecto-quiz">Código fuente</a>
   </footer>
 </div>
+<script type="text/javascript">
+  var temaQuiz = document.getElementsByClassName('tema');
+  var temas = document.getElementsByTagName("option");
+
+  function tituloTema(texto) {
+    switch (texto) {
+      case 'ocio':
+        return 'Ocio';
+      case 'humanidades':
+        return 'Humanidades';
+      case 'ciencia':
+        return 'Ciencia';
+      case 'tecnologia':
+        return 'Tecnología';
+      default:
+        return 'Otro';
+    }
+  }
+
+  function seleccionar() {
+    for(var i = 0; i<temas.length; i++) {
+      if (temas[i].value === temaActual) {
+        temas[i].selected = "selected";
+      }
+    }
+  }
+
+  function onLoad() {
+    for (var i = 0; i<temaQuiz.length; i++) {
+      temaQuiz[i].innerHTML = tituloTema(temaQuiz[i].innerHTML);
+    }
+    seleccionar();
+  };
+</script>
 </body>
 </html>

@@ -1,8 +1,32 @@
 <label for="preg" class="rem">Pregunta:</label>
-<input type="text" id="preg" name="quiz[pregunta]" placeholder="Escriba la pregunta" value="<%= quiz.pregunta %>" autofocus>
+<input type="text" id="preg" name="quiz[pregunta]"
+  placeholder="Escriba la pregunta" value="<%= quiz.pregunta %>" autofocus><br>
 <br>
 <label for="resp" class="rem">Respuesta:</label>
-<input type="text" id="resp" name="quiz[respuesta]" placeholder="Escriba la respuesta" value="<%= quiz.respuesta %>">
-<br><br>
-<input type="submit" value="Salvar">
-<br><br>
+<input type="text" id="resp" name="quiz[respuesta]"
+  placeholder="Escriba la respuesta" value="<%= quiz.respuesta %>"><br>
+<br>
+<label for="tema" class="rem">Tema:</label>
+<select id="tema" name="quiz[tema]">
+  <option value="ciencia">
+    Ciencia
+  </option>
+  <option value="humanidades">
+    Humanidades
+  </option>
+  <option value="ocio">
+    Ocio
+  </option>
+  <option value="tecnologia">
+    Tecnología
+  </option>
+  <option value="otro">
+    Otro
+  </option>
+</select><br>
+<br>
+<input type="submit" value="Salvar"><br>
+<br>
+<script type="text/javascript">
+  var temaActual = "<%= quiz.tema%>";
+</script>
