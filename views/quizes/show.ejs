@@ -3,3 +3,15 @@
   <input type="text" name="respuesta" placeholder="Responda aquí" autofocus/>
   <input type="submit" value="Enviar">
 </form>
+<br>
+<p>
+  <a href="/quizes/<%= quiz.id %>/comments/new">
+    <button>Nuevo comentario</button>
+  </a>
+</p>
+<br>
+<p><strong>Comentarios:</strong></p>
+
+<% for (index in quiz.Comments) { %>
+<p>- <%= quiz.Comments[index].texto %></p>
+<% } %>
