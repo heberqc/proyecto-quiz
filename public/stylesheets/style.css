@@ -23,3 +23,6 @@ a:hover {
 	color: #f61;
 	font-size: smaller;
 }
+.right {
+	float: right;
+}
