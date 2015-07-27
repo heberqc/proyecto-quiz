@@ -2,7 +2,7 @@ var users = {
   admin: {
     id: 1,
     username: 'admin',
-    password: '69566'
+    password: '1234'
   },
   pepe: {
     id: 2,
