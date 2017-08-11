@@ -6,8 +6,8 @@
     "start": "node ./bin/www"
   },
   "engines": {
-    "node": "0.10.x",
-    "npm": "1.4.x"
+    "node": "6.11.x",
+    "npm": "2.1.x"
   },
   "devDependencies": {
     "sqlite3": "^3.0.9"
